@@ -1,0 +1,36 @@
+1.
+alloc/init
+loadView
+viewDidLoad
+viewWillAppear
+viewDidAppear
+dealloc
+viewDidDisappear
+viewWillDisappear
+
+2.
+UIScrollview
+UITableView
+UICollectionView
+UIWebView
+WKWebView
+
+3.
+a.定义每个UITableView中的cell的行高
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90.0;
+}
+
+b.设置UITableView每个分组的Header的Title
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return [_arrayType objectAtIndex:section];
+}
+
+c.设置UITableView分组Header的高
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30.0;
+}
